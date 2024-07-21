@@ -1,0 +1,43 @@
+{
+	"name": "solid-pattern",
+	"version": "0.1.0",
+	"type": "module",
+	"description": "ts-pattern wrapper for Solid",
+	"author": "XiNiHa <me@xiniha.dev>",
+	"main": "dist/index.cjs",
+	"module": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"exports": {
+		".": {
+			"import": {
+				"types": "./dist/index.d.ts",
+				"default": "./dist/index.js"
+			},
+			"require": {
+				"types": "./dist/index.d.cts",
+				"default": "./dist/index.cjs"
+			}
+		},
+		"./package.json": "./package.json"
+	},
+	"scripts": {
+		"build": "tsup index.ts --target esnext --dts --format cjs,esm",
+		"check": "biome check .",
+		"fix": "biome check --write ."
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^1.8.3",
+		"solid-js": "^1.8.18",
+		"ts-pattern": "^5.2.0",
+		"tsup": "^8.2.1",
+		"typescript": "^5.5.3"
+	},
+	"peerDependencies": {
+		"solid-js": "1",
+		"ts-pattern": "5",
+		"typescript": ">= 5"
+	},
+	"files": ["dist"],
+	"license": "MIT",
+	"packageManager": "pnpm@9.4.0+sha512.f549b8a52c9d2b8536762f99c0722205efc5af913e77835dbccc3b0b0b2ca9e7dc8022b78062c17291c48e88749c70ce88eb5a74f1fa8c4bf5e18bb46c8bd83a"
+}

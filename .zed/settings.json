@@ -1,0 +1,16 @@
+{
+	"formatter": {
+		"external": {
+			"command": "./node_modules/@biomejs/biome/bin/biome",
+			"arguments": ["format", "--write", "--stdin-file-path", "{buffer_path}"]
+		}
+	},
+	"languages": {
+		"TypeScript": {
+			"code_actions_on_format": {
+				"source.fixAll.biome": true,
+				"source.organizeImports.biome": true
+			}
+		}
+	}
+}
